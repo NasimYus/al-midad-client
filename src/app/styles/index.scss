@@ -1,0 +1,16 @@
+@use "@shared/styles/variables" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: $text-primary;
+  background: $background;
+}
+
+#root {
+  min-height: 100vh;
+}
