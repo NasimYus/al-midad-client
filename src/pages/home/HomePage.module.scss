@@ -1,0 +1,78 @@
+@use "@shared/styles/mixins" as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.emptySection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emptyTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+.emptyHeadline {
+  margin: 0 0 4px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.emptyText {
+  margin: 0;
+  font-size: 14px;
+  color: rgba(31, 41, 55, 0.6);
+}

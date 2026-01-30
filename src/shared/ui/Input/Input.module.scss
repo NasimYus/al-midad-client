@@ -1,0 +1,21 @@
+@use "@shared/styles/variables" as *;
+@use "@shared/styles/mixins" as *;
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid rgba(31, 41, 55, 0.12);
+  border-radius: 12px;
+  font-size: 14px;
+  background: #fff;
+  transition: border-color 0.2s ease;
+
+  &:focus {
+    outline: none;
+    border-color: $accent;
+  }
+
+  @include mobile {
+    font-size: 14px;
+  }
+}

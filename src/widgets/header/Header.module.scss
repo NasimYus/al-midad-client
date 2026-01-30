@@ -1,0 +1,67 @@
+@use "@shared/styles/variables" as *;
+@use "@shared/styles/mixins" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 0 32px;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 0 24px;
+  }
+}
+
+.logoBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: $text-primary;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: rgba(31, 41, 55, 0.6);
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) auto;
+  gap: 12px;
+  align-items: center;
+
+  @include mobile {
+    width: 100%;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+.filterWrapper {
+  position: relative;
+}
+
+.filterButton {
+  display: none;
+
+  @include mobile {
+    display: inline-flex;
+  }
+}
+
+.filterBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ef4444;
+}
